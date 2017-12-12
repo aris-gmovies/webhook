@@ -20,10 +20,23 @@ app.post('/webhook', (req, res) => {
     // Iterates over each entry - there may be multiple if batched
     body.entry.forEach(function(entry) {
 
-      // Gets the message. entry.messaging is an array, but 
-      // will only ever contain one message, so we get index 0
-      let webhookEvent = entry.messaging[0];
-      console.log(webhookEvent);
+     // Gets the body of the webhook event
+      let webhook_event = entry.messaging[0];
+      console.log(webhook_event);
+
+
+      // Get the sender PSID
+      let sender_psid = webhook_event.sender.id;
+      console.log('Sender PSID: ' + sender_psid);
+
+      // Check if the event is a message or postback and
+      // pass the event to the appropriate handler function
+      if (webhook_event.message) {
+        handleMessage(sender_psid, webhook_event.message);        
+      } else if (webhook_event.postback) {
+        handlePostback(sender_psid, webhook_event.postback);
+      }
+  
     });
 
     // Returns a '200 OK' response to all requests
@@ -34,6 +47,8 @@ app.post('/webhook', (req, res) => {
   }
 
 });
+
+
 
 // Adds support for GET requests to our webhook
 app.get('/webhook', (req, res) => {
@@ -64,3 +79,57 @@ app.get('/webhook', (req, res) => {
 });
 
 
+body.entry.forEach(function(entry) {
+
+  // Gets the body of the webhook event
+  let webhook_event = entry.messaging[0];
+  console.log(webhook_event);
+
+
+  // Get the sender PSID
+  let sender_psid = webhook_event.sender.id;
+  console.log('Sender PSID: ' + sender_psid);
+
+  // Check if the event is a message or postback and
+  // pass the event to the appropriate handler function
+  if (webhook_event.message) {
+    handleMessage(sender_psid, webhook_event.message);        
+  } else if (webhook_event.postback) {
+    handlePostback(sender_psid, webhook_event.postback);
+  }
+  
+});
+
+function callSendAPI(sender_psid, response) {
+  // Construct the message body
+  let request_body = {
+    "recipient": {
+      "id": sender_psid
+    },
+    "message": response
+  }
+}
+
+function callSendAPI(sender_psid, response) {
+  // Construct the message body
+  let request_body = {
+    "recipient": {
+      "id": sender_psid
+    },
+    "message": response
+  }
+
+  // Send the HTTP request to the Messenger Platform
+  request({
+    "uri": "https://graph.facebook.com/v2.6/me/messages",
+    "qs": { "access_token": EAAJVjSGHUrYBAJE9E4ZAjziKP5kil3aXO46IHZA71lbGh4SpoCjiHr5UGGIc3Wep6qUXKzRczglzIRSw5iR2PKbVp3i54b2croqTB3GzhrGNgTHgnlffU0Oj39bYoH9a0QsWXLnRg7fH7My017rdefTcJP1P2c6sNcFYDsOwZDZD },
+    "method": "POST",
+    "json": request_body
+  }, (err, res, body) => {
+    if (!err) {
+      console.log('message sent!')
+    } else {
+      console.error("Unable to send message:" + err);
+    }
+  }); 
+}
