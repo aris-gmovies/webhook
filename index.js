@@ -7,7 +7,8 @@ const
   app = express().use(bodyParser.json()); // creates express http server
 
 // Sets server port and logs message on success
-
+app.listen(process.env.PORT || 1337, () => console.log('webhook is listening'));
+port: process.env.PORT
 // All callbacks for Messenger will be POST-ed here
 app.post("/webhook", function (req, res) {
   // Make sure this is a page subscription
