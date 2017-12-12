@@ -6,8 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-  },
-  "author": "Aris Espiritu Makoy Montano",
+  }  "author": "Aris Espiritu Makoy Montano",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.2",
