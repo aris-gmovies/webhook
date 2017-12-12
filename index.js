@@ -12,6 +12,7 @@ app.listen(process.env.PORT || 1337, () => console.log('webhook is listening'));
 // All callbacks for Messenger will be POST-ed here
 app.post("/webhook", function (req, res) {
   // Make sure this is a page subscription
+  console.log('aw')
   if (req.body.object == "page") {
     // Iterate over each entry
     // There may be multiple entries if batched
