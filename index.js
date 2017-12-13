@@ -53,7 +53,7 @@
       }
       if (event.postback) {
         let text = JSON.stringify(event.postback)
-        sendTextMessage(sender, "Here's our GMOVIES FAQ", token)
+        sendfaqoptions(sender)
         continue
       }
     }
@@ -136,7 +136,7 @@
           console.log('Error: ', response.body.error)
         }
       })
-    }*/
+    }
 
     /*
      function sendGenericMessage(sender) {
