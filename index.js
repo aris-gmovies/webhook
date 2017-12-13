@@ -90,7 +90,6 @@
             "template_type": "generic",
             "elements": [{
               "title": "GENERAL",
-              "subtitle": "Element #1 of an hscroll",
               "image_url": "https://raw.githubusercontent.com/aris-gmovies/webhook/master/general.jpg",
               "buttons": [{
                 "type": "web_url",
@@ -105,6 +104,14 @@
               "title": "SCHEDULES",
               "subtitle": "Element #2 of an hscroll",
               "image_url": "https://raw.githubusercontent.com/aris-gmovies/webhook/master/schedules.jpg",
+              "buttons": [{
+                "type": "postback",
+                "title": "Postback",
+                "payload": "Payload for second element in a generic bubble",
+              }, {
+              "title": "RESERVATION",
+              "subtitle": "Element #2 of an hscroll",
+              "image_url": "https://raw.githubusercontent.com/aris-gmovies/webhook/master/reservation.jpg",
               "buttons": [{
                 "type": "postback",
                 "title": "Postback",
