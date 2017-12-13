@@ -53,7 +53,7 @@
       }
       if (event.postback) {
         let text = JSON.stringify(event.postback)
-        sendfaqoptions(sender)
+        sendGenericMessage(sender)
         continue
       }
     }
@@ -82,64 +82,6 @@
     }
 
 
-    function sendfaqoptions(sender) {
-      let messageData = {
-        "text": "Would you like to play a game?",
-        "attachments": [
-           {
-            "text": "Choose a game to play",
-            "fallback": "You are unable to choose a game",
-            "callback_id": "wopr_game",
-            "color": "#3AA3E3",
-            "attachment_type": "default",
-            "actions": [
-                {
-                    "name": "game",
-                    "text": "Chess",
-                    "type": "button",
-                    "value": "chess"
-                },
-                {
-                    "name": "game",
-                    "text": "Falken's Maze",
-                    "type": "button",
-                    "value": "maze"
-                },
-                {
-                    "name": "game",
-                    "text": "Thermonuclear War",
-                    "style": "danger",
-                    "type": "button",
-                    "value": "war",
-                    "confirm": {
-                        "title": "Are you sure?",
-                        "text": "Wouldn't you prefer a good game of chess?",
-                        "ok_text": "Yes",
-                        "dismiss_text": "No"
-                    }
-                }
-            ]
-        }
-    ]
-}
-      request({
-        url: 'https://graph.facebook.com/v2.6/me/messages',
-        qs: {access_token:token},
-        method: 'POST',
-        json: {
-          recipient: {id:sender},
-          message: messageData,
-        }
-      }, function(error, response, body) {
-        if (error) {
-          console.log('Error sending messages: ', error)
-        } else if (response.body.error) {
-          console.log('Error: ', response.body.error)
-        }
-      })
-    }
-
-    /*
      function sendGenericMessage(sender) {
       let messageData = {
         "attachment": {
@@ -187,4 +129,4 @@
           console.log('Error: ', response.body.error)
         }
       })
-    }*/
+    }
