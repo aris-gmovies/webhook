@@ -41,9 +41,9 @@
         if (text === 'Generic') {
           sendGenericMessage(sender)
           continue
-        }else (text === 'what is gmovies?'){
+        }else if (text === 'what is gmovies?'){
           sendTextMessage(sender, "Booking tickets!yeah!");
-        }else {
+        }else  {
           sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
         }
       }
