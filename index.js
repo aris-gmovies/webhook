@@ -84,35 +84,43 @@
 
      function sendGenericMessage(sender) {
       let messageData = {
-        "attachment": {
-          "type": "template",
-          "payload": {
-            "template_type": "generic",
-            "elements": [{
-              "title": "First card",
-              "subtitle": "Element #1 of an hscroll",
-              "image_url": "http://messengerdemo.parseapp.com/img/rift.png",
-              "buttons": [{
-                "type": "web_url",
-                "url": "https://www.messenger.com",
-                "title": "web url"
-              }, {
-                "type": "postback",
-                "title": "Postback",
-                "payload": "Payload for first element in a generic bubble",
-              }],
-            }, {
-              "title": "Second card",
-              "subtitle": "Element #2 of an hscroll",
-              "image_url": "http://messengerdemo.parseapp.com/img/gearvr.png",
-              "buttons": [{
-                "type": "postback",
-                "title": "Postback",
-                "payload": "Payload for second element in a generic bubble",
-              }],
-            }]
-          }
-        }
+        "text": "Would you like to play a game?",
+        "attachments": [
+            {
+                "text": "Choose a game to play",
+                "fallback": "You are unable to choose a game",
+                "callback_id": "wopr_game",
+                "color": "#3AA3E3",
+                "attachment_type": "default",
+                "actions": [
+                    {
+                        "name": "game",
+                        "text": "Chess",
+                        "type": "button",
+                        "value": "chess"
+                    },
+                    {
+                        "name": "game",
+                        "text": "Falken's Maze",
+                        "type": "button",
+                        "value": "maze"
+                    },
+                    {
+                        "name": "game",
+                        "text": "Thermonuclear War",
+                        "style": "danger",
+                        "type": "button",
+                        "value": "war",
+                        "confirm": {
+                            "title": "Are you sure?",
+                            "text": "Wouldn't you prefer a good game of chess?",
+                            "ok_text": "Yes",
+                            "dismiss_text": "No"
+                        }
+                    }
+                ]
+            }
+        ]
       }
       request({
         url: 'https://graph.facebook.com/v2.6/me/messages',
