@@ -84,10 +84,9 @@
 
      function sendGenericMessage(sender) {
       let messageData = {
-            "attachments": 
-               {
+            
                 text: "This is a line of text.\nAnd this is another one."
-            }
+       
           }
       request({
         url: 'https://graph.facebook.com/v2.6/me/messages',
