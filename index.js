@@ -84,36 +84,44 @@
 
      function sendGenericMessage(sender) {
       let messageData = {
-            
-               {
-    "attachments": [
-        {
-            "fallback": "Required plain-text summary of the attachment.",
-            "color": "#36a64f",
-            "pretext": "Optional text that appears above the attachment block",
-            "author_name": "Bobby Tables",
-            "author_link": "http://flickr.com/bobby/",
-            "author_icon": "http://flickr.com/icons/bobby.jpg",
-            "title": "Slack API Documentation",
-            "title_link": "https://api.slack.com/",
-            "text": "Optional text that appears within the attachment",
-            "fields": [
+            "text": "Would you like to play a game?",
+            "attachments": [
                 {
-                    "title": "Priority",
-                    "value": "High",
-                    "short": false
+                    "text": "Choose a game to play",
+                    "fallback": "You are unable to choose a game",
+                    "callback_id": "wopr_game",
+                    "color": "#3AA3E3",
+                    "attachment_type": "default",
+                    "actions": [
+                        {
+                            "name": "game",
+                            "text": "Chess",
+                            "type": "button",
+                            "value": "chess"
+                        },
+                        {
+                            "name": "game",
+                            "text": "Falken's Maze",
+                            "type": "button",
+                            "value": "maze"
+                        },
+                        {
+                            "name": "game",
+                            "text": "Thermonuclear War",
+                            "style": "danger",
+                            "type": "button",
+                            "value": "war",
+                            "confirm": {
+                                "title": "Are you sure?",
+                                "text": "Wouldn't you prefer a good game of chess?",
+                                "ok_text": "Yes",
+                                "dismiss_text": "No"
+                            }
+                        }
+                    ]
                 }
-            ],
-            "image_url": "http://my-website.com/path/to/image.jpg",
-            "thumb_url": "http://example.com/path/to/thumb.png",
-            "footer": "Slack API",
-            "footer_icon": "https://platform.slack-edge.com/img/default_application_icon.png",
-            "ts": 123456789
+            ]
         }
-    ]
-}
-       
-          }
       request({
         url: 'https://graph.facebook.com/v2.6/me/messages',
         qs: {access_token:token},
