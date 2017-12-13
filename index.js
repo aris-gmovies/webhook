@@ -84,12 +84,9 @@
 
      function sendGenericMessage(sender) {
       let messageData = {
-        "greeting":[
-            {
-              "locale":"default",
-              "text":"Hello {{user_first_name}}!"
-            }
-          ]
+        {
+           text: "This is a line of text.\nAnd this is another one."
+        }
         
       }
       request({
