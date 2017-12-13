@@ -89,7 +89,7 @@
           "payload": {
             "template_type": "generic",
             "elements": [{
-              "title": "First card",
+              "title": "GENERAL",
               "subtitle": "Element #1 of an hscroll",
               "image_url": "http://messengerdemo.parseapp.com/img/rift.png",
               "buttons": [{
@@ -102,7 +102,7 @@
                 "payload": "Payload for first element in a generic bubble",
               }],
             }, {
-              "title": "Second card",
+              "title": "SCHEDULES",
               "subtitle": "Element #2 of an hscroll",
               "image_url": "http://messengerdemo.parseapp.com/img/gearvr.png",
               "buttons": [{
