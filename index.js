@@ -83,6 +83,7 @@
 
 
     function sendfaqoptions(sender) {
+      let messageData = {
         "text": "Would you like to play a game?",
         "attachments": [
            {
