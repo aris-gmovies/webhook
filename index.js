@@ -62,7 +62,6 @@
 
     const token = process.env.PAGE_ACCESS_TOKEN
 
-
     function sendTextMessage(sender, text) {
       let messageData = { text:text }
       request({
@@ -82,6 +81,8 @@
       })
     }
 
+
+    /*
      function sendGenericMessage(sender) {
       let messageData = {
         "attachment": {
@@ -129,4 +130,4 @@
           console.log('Error: ', response.body.error)
         }
       })
-    }
+    }*/
