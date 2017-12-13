@@ -91,7 +91,7 @@
             "elements": [{
               "title": "GENERAL",
               "subtitle": "Element #1 of an hscroll",
-              "image_url": "http://messengerdemo.parseapp.com/img/rift.png",
+              "image_url": "https://raw.githubusercontent.com/aris-gmovies/webhook/master/general.jpg",
               "buttons": [{
                 "type": "web_url",
                 "url": "https://www.messenger.com",
@@ -104,7 +104,7 @@
             }, {
               "title": "SCHEDULES",
               "subtitle": "Element #2 of an hscroll",
-              "image_url": "http://messengerdemo.parseapp.com/img/gearvr.png",
+              "image_url": "https://raw.githubusercontent.com/aris-gmovies/webhook/master/schedules.jpg",
               "buttons": [{
                 "type": "postback",
                 "title": "Postback",
