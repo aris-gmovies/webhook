@@ -84,7 +84,7 @@
 
      function sendGenericMessage(sender) {
       let messageData = {
-        "text": "Would you like to play a game?",
+        
         "attachments": [
             {
                 "text": "Choose a game to play",
