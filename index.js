@@ -38,12 +38,16 @@
       let sender = event.sender.id
       if (event.message && event.message.text) {
         let text = event.message.text
+
+        text="Hoy";
         if (text === 'Generic') {
           sendGenericMessage(sender)
           continue
-        }else if (text === 'what is gmovies?'){
-          sendTextMessage(sender, "Booking tickets!yeah!");
-        }else  {
+        }
+        else if (text === 'bash'){
+          sendTextMessage(sender, "Ang pogi mo Bash");
+        }
+        else  {
           sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
         }
       }
