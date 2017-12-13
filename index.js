@@ -41,8 +41,11 @@
         if (text === 'Generic') {
           sendGenericMessage(sender)
           continue
+        }else (text === 'what is gmovies?'){
+          sendTextMessage(sender, "Booking tickets!yeah!");
+        }else {
+          sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
         }
-        sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
       }
       if (event.postback) {
         let text = JSON.stringify(event.postback)
