@@ -44,8 +44,6 @@
       res.sendStatus(200)
     })
 
-    const token = "EAAJVjSGHUrYBAOJx0KK2B9gPudRguiZBT8zuFZBsjCGFLTn8nM4nRQ49XGXVTb50ZA60qRfXQVSkdFq5AVV7OAANHhcbAVdYd1ly9ZA7qiUKZAZCtRMOzY6RylpbsOjPugcjbZAt0yhcxFSh3ZCkiz9KNQ7kwaZAzZBGJApk1956bxZAAZDZD"
-
     const token = process.env.PAGE_ACCESS_TOKEN
 
 
