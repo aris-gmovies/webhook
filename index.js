@@ -108,9 +108,9 @@
                 "type": "postback",
                 "title": "Postback",
                 "payload": "Payload for second element in a generic bubble",
-              }, {
+              }],
+            }, {
               "title": "RESERVATION",
-              "subtitle": "Element #2 of an hscroll",
               "image_url": "https://raw.githubusercontent.com/aris-gmovies/webhook/master/reservation.jpg",
               "buttons": [{
                 "type": "postback",
