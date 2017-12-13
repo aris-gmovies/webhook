@@ -84,8 +84,8 @@
 
      function sendGenericMessage(sender) {
       let messageData = {
-            "text": "Would you like to play a game?",
-            "attachments": [
+            "text": "Have some questions?",
+            "attachments": 
                 {
                     "text": "Choose a game to play",
                     "fallback": "You are unable to choose a game",
@@ -120,7 +120,7 @@
                         }
                     ]
                 }
-            ]
+   
         }
       request({
         url: 'https://graph.facebook.com/v2.6/me/messages',
