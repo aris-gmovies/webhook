@@ -37,8 +37,6 @@
       let event = req.body.entry[0].messaging[i]
       let sender = event.sender.id
 
-      event.message.text = "FAQ";
-
       if (event.message && event.message.text) {
         let text = event.message.text
 
@@ -47,7 +45,7 @@
           continue
         }
         else if (text === 'bash'){
-          sendTextMessage(sender, "Ang pogi mo Bash");
+          sendTextMessage(sender, "<b>Ang pogi mo Bash<b>");
         }
         else  {
           sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
