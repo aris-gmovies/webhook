@@ -84,6 +84,9 @@
 
      function sendGenericMessage(sender) {
       let messageData = {
+          "recipient":{
+            "id":"<PSID>"
+          },
           "message":{
             "attachment":{
               "type":"template",
@@ -104,6 +107,7 @@
               }
             }
           }
+        }
       }
       request({
         url: 'https://graph.facebook.com/v2.6/me/messages',
