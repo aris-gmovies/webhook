@@ -84,28 +84,33 @@
 
      function sendGenericMessage(sender) {
       let messageData = {
-          "recipient":{
-            "id":"<PSID>"
-          },
-          "message":{
-            "attachment":{
-              "type":"template",
-              "payload":{
-                "template_type":"button",
-                "text":"What do you want to do next?",
-                "buttons":[
-                  {
-                    "type":"web_url",
-                    "url":"https://www.messenger.com",
-                    "title":"Visit Messenger"
-                  },
-                  {
-                    ...
-                  },
-                  {...}
-                ]
-              }
-            }
+        "attachment": {
+          "type": "template",
+          "payload": {
+            "template_type": "generic",
+            "elements": [{
+              "title": "GENERAL",
+              "subtitle": "Element #1 of an hscroll",
+              "image_url": "http://messengerdemo.parseapp.com/img/rift.png",
+              "buttons": [{
+                "type": "web_url",
+                "url": "https://www.messenger.com",
+                "title": "web url"
+              }, {
+                "type": "postback",
+                "title": "Postback",
+                "payload": "Payload for first element in a generic bubble",
+              }],
+            }, {
+              "title": "SCHEDULES",
+              "subtitle": "Element #2 of an hscroll",
+              "image_url": "http://messengerdemo.parseapp.com/img/gearvr.png",
+              "buttons": [{
+                "type": "postback",
+                "title": "Postback",
+                "payload": "Payload for second element in a generic bubble",
+              }],
+            }]
           }
         }
       }
