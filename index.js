@@ -1,4 +1,4 @@
- 'use strict'
+'use strict'
     
     const express = require('express')
     const bodyParser = require('body-parser')
@@ -90,7 +90,8 @@
             "template_type": "generic",
             "elements": [{
               "title": "GENERAL",
-              "image_url": "https://raw.githubusercontent.com/aris-gmovies/webhook/master/general.jpg",
+              "subtitle": "Element #1 of an hscroll",
+              "image_url": "http://messengerdemo.parseapp.com/img/rift.png",
               "buttons": [{
                 "type": "web_url",
                 "url": "https://www.messenger.com",
@@ -103,15 +104,7 @@
             }, {
               "title": "SCHEDULES",
               "subtitle": "Element #2 of an hscroll",
-              "image_url": "https://raw.githubusercontent.com/aris-gmovies/webhook/master/schedules.jpg",
-              "buttons": [{
-                "type": "postback",
-                "title": "Postback",
-                "payload": "Payload for second element in a generic bubble",
-              }],
-            }, {
-              "title": "RESERVATION",
-              "image_url": "https://raw.githubusercontent.com/aris-gmovies/webhook/master/schedules.jpg",
+              "image_url": "http://messengerdemo.parseapp.com/img/gearvr.png",
               "buttons": [{
                 "type": "postback",
                 "title": "Postback",
