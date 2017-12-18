@@ -1,16 +1,17 @@
 {
   "name": "gmovies-webhook",
   "version": "1.0.0",
-  "description": "gmovies webhook",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Aris Espiritu Makoy Montano",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.2",
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "request": "^2.83.0"
   }
 }
