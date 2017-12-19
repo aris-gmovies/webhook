@@ -205,37 +205,45 @@
           "payload": {
             "template_type": "generic",
             "elements": [{
-              "title": "Reservation",
-              "subtitle": "How do I book seats and buy tickets through GMovies mobile app?",
-              "image_url": "https://s3.envato.com/files/228448382/screenshots/10_Background_Color.png",
+              "title": "How do I book seats and buy tickets through GMovies mobile app?",
+              "subtitle": "",
+              "image_url": "https://ak5.picdn.net/shutterstock/videos/559285/thumb/1.jpg",
               "buttons": [{
                 "type": "postback",
                 "title": "Click here for info",
                 "payload": "seatsbuy",
               }],
             }, {
-              "title": "Reservation",
+              "title": "What payment options are available for GMovies?",
+              "subtitle": "",
+              "image_url": "http://www.wallpapermaven.com/i/abstract/5/Blue-Radial-Gradient-800x600.jpg",
               "buttons": [{
                 "type": "postback",
                 "title": "Click here for info",
                 "payload": "paymentopt",
               }],
             },{
-              "title": "Reservation",
+              "title": "I tried to purchase tickets online but my payment did not push through because of an error. When I tried to purchase the tickets again for the same seats, those were already taken. Does this mean that my previous transaction pushed through? I did not receive any email confirmation for this.",
+              "subtitle": "",
+              "image_url": "http://ceefc02649d25ca315ac-ef93c2ad0985f7464ef79b04e64427fa.r18.cf2.rackcdn.com/product_images/8567/Aurora_Petal_main.jpg",
               "buttons": [{
                 "type": "postback",
                 "title": "Click here for info",
                 "payload": "error",
               }],
             }, {
-              "title": "Reservation",
+              "title": "Can I cancel and request refund for the tickets I won’t be able to use?",
+              "subtitle": "",
+              "image_url": "http://www.wallpapermaven.com/i/abstract/5/Blue-Radial-Gradient-800x600.jpg",
               "buttons": [{
                 "type": "postback",
                 "title": "Click here for info",
                 "payload": "refund",
               }],
             }, {
-              "title": "Reservation",
+              "title": "Who can I contact in case of an error?",
+              "subtitle": "",
+              "image_url": "http://www.solidbackgrounds.com/images/1920x1080/1920x1080-yellow-solid-color-background.jpg",
               "buttons": [{
                 "type": "postback",
                 "title": "Click here for info",
